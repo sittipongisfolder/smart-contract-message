@@ -60,7 +60,7 @@ app.post("/message", async (req, res) => {
             return res.status(400).json({ error: "Message cannot be empty" });
         }
 
-        // ✅ ดึงข้อความเก่าก่อนอัปเดต
+        // ✅ ดึงข้อความเก่าก่อนอัปเดต // Sittipong Wongsuwan
         const oldMessage = await contract.methods.message().call();
         
         // ✅ บันทึกข้อความเก่าลงใน Memory (Array)
